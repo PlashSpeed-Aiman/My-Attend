@@ -1,0 +1,22 @@
+<div id="qr-available" class="fade-me-in">
+    <style>
+        .fade-me-out.htmx-swapping {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+.fade-me-in.htmx-added {
+  opacity: 0;
+}
+.fade-me-in {
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+    </style>
+    <img class="object-contain mx-auto my-auto" src="{{ qr }}" alt="QR Code">
+    <div class="flex flex-col gap-4">
+        <p class="text-center">Scan this QR code to mark your attendance. Host Id : {{ host_id }}</p>
+        <a class="border rounded-md min-w-3xl p-4 text-center mx-auto hover:bg-purple-400" href="{{ attendee_link }}">Attendee</a>
+        <a class="border rounded-md min-w-3xl p-4 text-center mx-auto hover:bg-purple-400">Organizer</a>
+    </div>
+    
+</div>

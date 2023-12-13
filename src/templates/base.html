@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>My Webpage</title>
+    <script src="https://unpkg.com/htmx.org@1.9.9" integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/output.css">
+</head>
+<body>
+    <div class="">
+        {% block header %}{% endblock %}
+    </div>
+    <div class=" min-h-screen w-screen">
+        {% block content %}{% endblock %}
+    </div>
+    <div class="footer">
+        {% block footer %}{% endblock %}
+    </div>
+</html>

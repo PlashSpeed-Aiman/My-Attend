@@ -1,0 +1,21 @@
+<div id="qr-section" class="min-h-screen fade-me-out">
+    <style>
+        .fade-me-out.htmx-swapping {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+.fade-me-in.htmx-added {
+  opacity: 0;
+}
+.fade-me-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+    </style>
+    <div class="mt-20 flex flex-col justify-center items-center gap-2">
+        <h1 class="text-3xl">SaaS Attendance System</h1>
+        <button class="p-5 border rounded-md transition text-xl shadow-md font-bold hover:bg-purple-400 hover:shadow-sm" hx-get="/generate" hx-swap="outerHTML swap:0.5s" hx-target="#qr-section">Click here to create attendance QR</button>
+    </div>
+   
+</div>
+

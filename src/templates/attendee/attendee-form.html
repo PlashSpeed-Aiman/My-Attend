@@ -1,0 +1,12 @@
+<div id="attendance-form" class="min-h-screen flex flex-col justify-center items-center ">
+    {% if has_attended == "False" %}
+    <form class="flex flex-col w-fit p-5 border rounded-md gap-1 shadow-md mx-auto my-auto" action="{{ host_id_link }}" method="post" hx-post="{{ host_id_link }}" hx-swap="outerHTML" >
+        <input class="bg-gray-100 px-3 py-2" required type="text" name="name" placeholder="Name">
+        <input class="bg-gray-100 px-3 py-2" required type="text" name="matric-number" placeholder="Matric Number">
+        <input class="bg-gray-100 px-3 py-2" required type="text" name="email" placeholder="Email">
+        <input class="ml-auto bg-purple-500 px-3 py-2 w-fit rounded-md transition hover:bg-purple-700" type="submit" value="Submit">
+    </form>
+    {% elif has_attended == "True" %}
+    <p class="mx-auto my-auto w-fit h-fit">Attendance Recorded</p>
+    {% endif %}
+</div>

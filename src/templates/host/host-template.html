@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block header %}
+    <nav>
+        <a href="/">Home</a>
+        <a href="/{{ host-id-link }}">{{ host-id }}</a>
+    </nav>
+{% endblock %}
+{% block content %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Matric Number</th>
+            <th>Email</th>
+        </tr>
+        {% for attendee in attendees %}
+            <tr>
+                <td>{{ attendee[0] }}</td>
+                <td>{{ attendee[1] }}</td>
+                <td>{{  attendee[2]  }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+{% block footer %}
+    <p>Goodbye</p>
+{% endblock %}
